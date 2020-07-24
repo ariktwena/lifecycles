@@ -22,7 +22,8 @@ class App extends React.Component {
           <button
             onClick={() =>
               this.setState(state => ({
-                showChild: !state.showChild
+                  //The "boom" (!) toggles the the opposite value. !true = false
+                  showChild: !state.showChild
               }))
             }
           >

@@ -1,10 +1,19 @@
 import React from 'react';
 
 class Lifecycles extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     console.log('constructor!');
+
+    this.state = {
+      message: 'The state inside constructor',
+    }
+
   }
+
+  // state = {
+  //   message: 'State outside constructor',
+  // }
 
   componentDidMount() {
     console.log('componentDidMount!');
@@ -29,6 +38,7 @@ class Lifecycles extends React.Component {
       <div className='lifecycles'>
         <h3>LIFECYCLES COMPONENT</h3>
         {this.props.text}
+        {this.state.message}
       </div>
     );
   }
