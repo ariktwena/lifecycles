@@ -29,6 +29,8 @@ class Lifecycles extends React.Component {
 
   shouldComponentUpdate(nextProps, nextState) {
     console.log('shouldComponentUpdate!', nextProps);
+    //We only update, if the values are different (previous/next).
+    //In this case they are different because we add "_hallo" every time to the text
     return nextProps.text !== this.props.text;
   }
 
